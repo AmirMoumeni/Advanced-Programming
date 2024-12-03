@@ -1,0 +1,11 @@
+LeitnerBox : main.o FlashCard.o constants.h dayReport.h Boxes.h
+	g++ --std=c++20 main.o FlashCard.o -o LeitnerBox
+
+FlashCard.o : FlashCard.cpp FlashCard.h
+	g++ -c --std=c++20 FlashCard.cpp -o FlashCard.o
+
+main.o : main.cpp constants.h FlashCard.h Boxes.h dayReport.h 
+	g++ -c --std=c++20 main.cpp -o main.o
+	
+clean:
+	rm -f main.o FlashCard.o
