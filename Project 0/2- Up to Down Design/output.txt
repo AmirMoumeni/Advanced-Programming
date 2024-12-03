@@ -1,7 +1,0 @@
-201: CCTV 430 140
-Spot 201 is occupied now.
-Spot 101 is occupied now.
-Spot 201 is free now.
-Total cost: 1410
-Spot 101 is free now.
-Total cost: 450
