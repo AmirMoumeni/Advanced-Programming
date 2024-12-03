@@ -1,0 +1,14 @@
+new_category Food Pizza Sandwich Burger Ash
+add_expence Food/Pizza 435000
+new_category Uni Jozveh Laptop Class
+add_expence Food/Sandwich 132000
+add_expence Uni/Jozveh 89000
+add_expence Uni/Laptop 49000000
+add_expence Uni/Class 5250000
+new_category Sport Shoes Gym Clothes Training Drugs
+add_expence Sport/Shoes 1350000
+add_expence Sport/Gym 4150000
+add_expence Sport/Training 2490000
+add_expence Sport/Clothes 2490000
+add_expence Sport/Drugs 2490000
+report

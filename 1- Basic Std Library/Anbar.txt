@@ -1,0 +1,32 @@
+void SortedReport (int threshold){
+    vector <string> sorted_category = Categories;
+    vector <int> sorted_Expence;
+    auto Expence_First = sorted_Expence.begin();
+    auto Expence_last = sorted_Expence.end();
+    auto Category_first = sorted_category.begin();
+    auto Category_last = sorted_category.end();
+    sort(Category_first , Category_last);
+    for(int i =0 ; i< Data_structure.size() ; i++){
+            int index = FindStringInVector(Categories , sorted_category[i]);
+            sorted_Expence = Data_structure[index].expence;
+            auto Expence_First = sorted_Expence.begin();
+            auto Expence_last = sorted_Expence.end();
+            sort (Expence_First , Expence_last);
+            cout << "Category: " <<Data_structure[index].category_name << endl
+                 << "Total Expenses: " << SumOfExpence(Data_structure[index].expence) <<endl
+                 <<"Subcategories Expences: " << endl;
+                 for(int j = Data_structure[index].Sub_category_names.size() ; j>0 ; j--){
+                 int index2 = FindIntInVector( Data_structure[index] .expence , sorted_Expence[j]);
+                    if(Data_structure[index].expence[index2] > threshold){
+                        cout << "    - " << Data_structure[index].Sub_category_names[index2] << ": " << Data_structure[index].expence[index2] <<endl;
+                    }
+                 }
+                 if (i == Data_structure.size() -1){
+                cout << "**********\n" ;
+            }
+            else{
+                cout << "----------\n" ;
+            }
+        }
+
+}
